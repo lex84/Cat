@@ -15,7 +15,6 @@ public class CatMatrix {
 				setCat(r,c,0);
 			}
 		}
-		System.out.println("Clean.....");
 	}
 	public void setCat(int row, int column, int value)
 	{

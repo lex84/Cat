@@ -53,21 +53,21 @@ public class Play {
 	public boolean comfir(int r, int c)
 	{
 		if(catMatrix.getCat()[r][0]== player && catMatrix.getCat()[r][1]== player && catMatrix.getCat()[r][2]== player ){
-			changeColor(r,0,r,1,r,2);	
-			return true;
-			}
+			changeColor(0,r,c);	
+			return true;}
 		if(catMatrix.getCat()[0][c]== player && catMatrix.getCat()[1][c]== player && catMatrix.getCat()[2][c]== player ){
-			changeColor(0,c,1,c,2,c);	
+			changeColor(1,r,c);	
 			return true;}
 		if(catMatrix.getCat()[0][0]== player && catMatrix.getCat()[1][1]== player && catMatrix.getCat()[2][2]== player ){
-			changeColor(0,0,1,1,2,2);
+			changeColor(2,r,c);	
 			return true;}
 		if(catMatrix.getCat()[0][2]== player && catMatrix.getCat()[1][1]== player && catMatrix.getCat()[2][0]== player ){
-			changeColor(0,2,1,1,2,0);
+			changeColor(3,r,c);	
 			return true;}
 		
 		return false;
 	}
+	
 	public void status(int r, int c)
 	{
 		if(count == 9)
@@ -92,54 +92,34 @@ public class Play {
 		}
 		
 	}
-	public void changeColor(int r, int c,int r2,int c2, int r3, int c3)
+	public void changeColor(int option,int r, int c)
 	{ 
-		//colors rows
-		if(r==0 && c ==0 && r2==0 && c2 ==1 && r3==0 && c3==2 ){
-			this.buttuns.colorButton(this.buttuns.getBtn00(), Color.GREEN);
-		    this.buttuns.colorButton(this.buttuns.getBtn01(), Color.GREEN);
-		    this.buttuns.colorButton(this.buttuns.getBtn02(), Color.GREEN);
-		}
-		if(r==1 && c ==0 && r2==1 && c2 ==1 && r3==1 && c3==2 ){
-			this.buttuns.colorButton(this.buttuns.getBtn10(), Color.GREEN);
-		    this.buttuns.colorButton(this.buttuns.getBtn11(), Color.GREEN);
-		    this.buttuns.colorButton(this.buttuns.getBtn12(), Color.GREEN);
-		}
-		if(r==2 && c ==0 && r2==2 && c2 ==1 && r3==2 && c3==2 ){
-			this.buttuns.colorButton(this.buttuns.getBtn20(), Color.GREEN);
-		    this.buttuns.colorButton(this.buttuns.getBtn21(), Color.GREEN);
-		    this.buttuns.colorButton(this.buttuns.getBtn22(), Color.GREEN);
-		}
-		//colors columns 
-		if(r==0 && c ==1 && r2==1 && c2 ==1 && r3==2 && c3==1 ){
-			this.buttuns.colorButton(this.buttuns.getBtn01(), Color.GREEN);
-		    this.buttuns.colorButton(this.buttuns.getBtn11(), Color.GREEN);
-			this.buttuns.colorButton(this.buttuns.getBtn21(), Color.GREEN);
-		}
-		if(r==0 && c ==2 && r2==1 && c2 ==2 && r3==2 && c3==2 ){
-			this.buttuns.colorButton(this.buttuns.getBtn02(), Color.GREEN);
-		    this.buttuns.colorButton(this.buttuns.getBtn12(), Color.GREEN);
-			this.buttuns.colorButton(this.buttuns.getBtn22(), Color.GREEN);
-		}		
-		if(r==0 && c ==0 && r2==1 && c2 ==0 && r3==2 && c3==0 ){
-			this.buttuns.colorButton(this.buttuns.getBtn00(), Color.GREEN);
-		    this.buttuns.colorButton(this.buttuns.getBtn10(), Color.GREEN);
-			this.buttuns.colorButton(this.buttuns.getBtn20(), Color.GREEN);
-		}
-		//colors cross  
-		if(r==0 && c ==0 && r2==1 && c2 ==1 && r3==2 && c3==2 ){
-			this.buttuns.colorButton(this.buttuns.getBtn00(), Color.GREEN);
-			this.buttuns.colorButton(this.buttuns.getBtn11(), Color.GREEN);
-			this.buttuns.colorButton(this.buttuns.getBtn22(), Color.GREEN);
-		}
-		// colors cross 
-		if(r==0 && c ==2 && r2==1 && c2 ==1 && r3==2 && c3==0 ){
-			this.buttuns.colorButton(this.buttuns.getBtn02(), Color.GREEN);
-			this.buttuns.colorButton(this.buttuns.getBtn11(), Color.GREEN);
-			this.buttuns.colorButton(this.buttuns.getBtn20(), Color.GREEN);
-		}		
-		
-		
+			switch(option)
+			{
+				case 0:
+					this.buttuns.colorButton(this.buttuns.getBtn(r,0), Color.GREEN);
+					this.buttuns.colorButton(this.buttuns.getBtn(r,1), Color.GREEN);
+					this.buttuns.colorButton(this.buttuns.getBtn(r,2), Color.GREEN);
+					break;
+					
+				case 1:
+					this.buttuns.colorButton(this.buttuns.getBtn(0,c), Color.GREEN);
+					this.buttuns.colorButton(this.buttuns.getBtn(1,c), Color.GREEN);
+					this.buttuns.colorButton(this.buttuns.getBtn(2,c), Color.GREEN);
+					break;
+					
+				case 2:
+					this.buttuns.colorButton(this.buttuns.getBtn(0,0), Color.GREEN);
+					this.buttuns.colorButton(this.buttuns.getBtn(1,1), Color.GREEN);
+					this.buttuns.colorButton(this.buttuns.getBtn(2,2), Color.GREEN);
+					break;
+					
+				case 3:
+					this.buttuns.colorButton(this.buttuns.getBtn(0,2), Color.GREEN);
+					this.buttuns.colorButton(this.buttuns.getBtn(1,1), Color.GREEN);
+					this.buttuns.colorButton(this.buttuns.getBtn(2,0), Color.GREEN);
+					break;
+			}
 	}
 	
 	

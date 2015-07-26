@@ -16,77 +16,77 @@ public class MyListerner {
 	}
 	public void listerner()
 	{
-		button.getBtn00().addActionListener(new ActionListener() {
+		button.getBtn(0, 0).addActionListener(new ActionListener() {
 			 
 	         public void actionPerformed(ActionEvent e)
 	         {
 	             //Execute when button is pressed
-	             play.select(button.getBtn00(),0,0);
+	             play.select(button.getBtn(0,0),0,0);
 	         }
 	     });
 		
-		button.getBtn01().addActionListener(new ActionListener() {
+		button.getBtn(0,1).addActionListener(new ActionListener() {
 			 
 	         public void actionPerformed(ActionEvent e)
 	         {
 	             //Execute when button is pressed
-	             play.select(button.getBtn01(),0,1);
+	             play.select(button.getBtn(0,1),0,1);
 	         }
 	     });
-		button.getBtn02().addActionListener(new ActionListener() {
+		button.getBtn(0,2).addActionListener(new ActionListener() {
 			 
 	         public void actionPerformed(ActionEvent e)
 	         {
 	             //Execute when button is pressed
-	             play.select(button.getBtn02(),0,2);
+	             play.select(button.getBtn(0,2),0,2);
 	         }
 	     });
-		button.getBtn10().addActionListener(new ActionListener() {
+		button.getBtn(1,0).addActionListener(new ActionListener() {
 			 
 	         public void actionPerformed(ActionEvent e)
 	         {
 	             //Execute when button is pressed
-	             play.select(button.getBtn10(),1,0);
+	             play.select(button.getBtn(1,0),1,0);
 	         }
 	     });
-		button.getBtn11().addActionListener(new ActionListener() {
+		button.getBtn(1,1).addActionListener(new ActionListener() {
 			 
 	         public void actionPerformed(ActionEvent e)
 	         {
 	             //Execute when button is pressed
-	             play.select(button.getBtn11(),1,1);
+	             play.select(button.getBtn(1,1),1,1);
 	         }
 	     });
-		button.getBtn12().addActionListener(new ActionListener() {
+		button.getBtn(1,2).addActionListener(new ActionListener() {
 			 
 	         public void actionPerformed(ActionEvent e)
 	         {
 	             //Execute when button is pressed
-	             play.select(button.getBtn12(),1,2);
+	             play.select(button.getBtn(1,2),1,2);
 	         }
 	     });
-		button.getBtn20().addActionListener(new ActionListener() {
+		button.getBtn(2,0).addActionListener(new ActionListener() {
 			 
 	         public void actionPerformed(ActionEvent e)
 	         {
 	             //Execute when button is pressed
-	             play.select(button.getBtn20(),2,0);
+	             play.select(button.getBtn(2,0),2,0);
 	         }
 	     });
-		button.getBtn21().addActionListener(new ActionListener() {
+		button.getBtn(2,1).addActionListener(new ActionListener() {
 			 
 	         public void actionPerformed(ActionEvent e)
 	         {
 	             //Execute when button is pressed
-	             play.select(button.getBtn21(),2,1);
+	             play.select(button.getBtn(2,1),2,1);
 	         }
 	     });
-		button.getBtn22().addActionListener(new ActionListener() {
+		button.getBtn(2,2).addActionListener(new ActionListener() {
 			 
 	         public void actionPerformed(ActionEvent e)
 	         {
 	             //Execute when button is pressed
-	             play.select(button.getBtn22(),2,2);
+	             play.select(button.getBtn(2,2),2,2);
 	         }
 	     });
 		

@@ -1,6 +1,5 @@
 package com.game.tictactoe;
 
-import java.awt.Graphics;
 import java.awt.GridLayout;
 
 import javax.swing.BoxLayout;
@@ -16,7 +15,7 @@ public class Game extends JPanel {
 	MyListerner listen;
 	
 	JFrame frame;
-	//JPanel panel;
+	JPanel panelInfo;
 	IconButton icone;
 	CatMatrix catMatrix;
 
@@ -26,7 +25,7 @@ public class Game extends JPanel {
 		icone =new  IconButton();
 		 gridSpaceGame = new GridLayout();
 		 buttons = new Buttons();
-		 createPanel();
+		 addButtons();
 		 createWindow();
 		 play = new Play(buttons, icone,catMatrix, this);
 		 listen = new MyListerner(buttons, play);
@@ -43,22 +42,22 @@ public class Game extends JPanel {
 	        frame.setVisible(true);
 	        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 	}
-	public void createPanel()
+	public void addButtons()
 	{
-		//panel= new JPanel();
+		panelInfo= new JPanel();
 		this.setLayout(new GridLayout(3,3,3,3));
 		
-		this.add(buttons.getBtn00());
-		this.add(buttons.getBtn01());
-		this.add(buttons.getBtn02());
+		this.add(buttons.getBtn(0,0));
+		this.add(buttons.getBtn(0,1));
+		this.add(buttons.getBtn(0,2));
 		    
-		this.add(buttons.getBtn10());
-		this.add(buttons.getBtn11());
-		this.add(buttons.getBtn12());
+		this.add(buttons.getBtn(1,0));
+		this.add(buttons.getBtn(1,1));
+		this.add(buttons.getBtn(1,2));
 		    
-		this.add(buttons.getBtn20());
-		this.add(buttons.getBtn21());
-		this.add(buttons.getBtn22());
+		this.add(buttons.getBtn(2,0));
+		this.add(buttons.getBtn(2,1));
+		this.add(buttons.getBtn(2,2));
 			
 	}
 	public  void refresh()

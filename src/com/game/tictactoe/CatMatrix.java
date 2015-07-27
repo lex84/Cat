@@ -2,16 +2,17 @@ package com.game.tictactoe;
 
 public class CatMatrix {
 
+	
 	private int[][] cat;
 	public CatMatrix() {
 		// TODO Auto-generated constructor stub
-		cat = new int[3][3];
+		cat = new int[Game.ROW][Game.COLUMN];
 		reset();
 	}
 	public void reset()
 	{
-		for(int r=0; r<3; r++){
-			for(int c=0; c<3;c++){
+		for(int r=Game.INIT; r<Game.ROW; r++){
+			for(int c=Game.INIT; c<Game.COLUMN;c++){
 				setCat(r,c,0);
 			}
 		}

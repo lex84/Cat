@@ -15,20 +15,20 @@ public class Buttons {
 	  
 	public Buttons() {
 		// TODO Auto-generated constructor stub
-		btn = new JButton[3][3];
+		btn = new JButton[Game.ROW][Game.COLUMN];
 		createButton();   
 	
 	}
 	public void createButton()
 	{
-		for(int r=0; r<3; r++)
-			for(int c=0; c<3; c++)
+		for(int r=Game.INIT; r<Game.ROW; r++)
+			for(int c=Game.INIT; c<Game.COLUMN; c++)
 				setBtn(new JButton(),r,c);
 	}
 	public void resetButton()
 	{
-		for(int r=0; r<3; r++){
-			for(int c=0; c<3; c++){
+		for(int r=Game.INIT; r<Game.ROW; r++){
+			for(int c=Game.INIT; c<Game.COLUMN; c++){
 				imageButton(btn[r][c],null);
 				colorButton(btn[r][c],null);
 			}

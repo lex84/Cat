@@ -70,16 +70,6 @@ public class Play {
 	
 	public void status(int r, int c)
 	{
-		if(count == 9)
-		{
-			JOptionPane.showMessageDialog(null, "Tie the game ");
-			count=0;
-			this.catMatrix.reset();
-			this.buttuns.resetButton();
-			game.refresh();
-			turn=true;
-			
-		}
 		if(comfir(r,c))
 		{
 			JOptionPane.showMessageDialog(null, "Player "+player+" Won");
@@ -90,6 +80,19 @@ public class Play {
 			turn=true;
 			
 		}
+		else 
+		{
+			if(count==9)
+			{
+				JOptionPane.showMessageDialog(null, "Tie the game ");
+				count=0;
+				this.catMatrix.reset();
+				this.buttuns.resetButton();
+				game.refresh();
+				turn=true;
+			}
+		}
+			
 		
 	}
 	public void changeColor(int option,int r, int c)

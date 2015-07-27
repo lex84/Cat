@@ -1,5 +1,6 @@
 package com.game.tictactoe;
 
+import java.awt.BorderLayout;
 import java.awt.GridLayout;
 
 import javax.swing.BoxLayout;
@@ -15,9 +16,9 @@ public class Game extends JPanel {
 	MyListerner listen;
 	
 	JFrame frame;
-	JPanel panelInfo;
 	IconButton icone;
 	CatMatrix catMatrix;
+	public static final int ROW=3, COLUMN=3, INIT=0;
 
 	public Game() {
 		// TODO Auto-generated constructor stub
@@ -35,18 +36,17 @@ public class Game extends JPanel {
 	public void createWindow()
 	{
 		    frame =new JFrame("Tic Tac Toe ");
-	        frame.setLayout(new BoxLayout(frame.getContentPane(),BoxLayout.Y_AXIS));
+		    frame.setLayout(new BoxLayout(frame.getContentPane(),BoxLayout.Y_AXIS));
 	        frame.setSize(300, 300);
-	        frame.add(this);
-	        
+	        frame.add(this,BorderLayout.CENTER);  
+	        frame.setLocationRelativeTo(null);
 	        frame.setVisible(true);
 	        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 	}
 	public void addButtons()
 	{
-		panelInfo= new JPanel();
-		this.setLayout(new GridLayout(3,3,3,3));
 		
+		this.setLayout(new GridLayout(ROW,COLUMN,3,3));
 		this.add(buttons.getBtn(0,0));
 		this.add(buttons.getBtn(0,1));
 		this.add(buttons.getBtn(0,2));

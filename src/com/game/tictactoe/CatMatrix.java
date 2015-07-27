@@ -20,6 +20,7 @@ public class CatMatrix {
 	public void setCat(int row, int column, int value)
 	{
 		cat[row][column]= value;
+		
 	}
 	public int[][] getCat()
 	{
@@ -28,7 +29,7 @@ public class CatMatrix {
 	public boolean validate(int row, int column)
 	{
 		if(cat[row][column]==0){
-		return true;
+			return true;
 		}
 		else
 		{
@@ -36,5 +37,6 @@ public class CatMatrix {
 		}
 		
 	}
+	
 		
 }

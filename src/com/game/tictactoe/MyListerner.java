@@ -7,7 +7,6 @@ public class MyListerner {
 
 	private Buttons button;
 	private Play play;
-	
 	public MyListerner(Buttons btn, Play play) {
 		// TODO Auto-generated constructor stub
 		this.button = btn;
@@ -62,7 +61,7 @@ public class MyListerner {
 	         public void actionPerformed(ActionEvent e)
 	         {
 	             //Execute when button is pressed
-	             play.select(button.getBtn(1,2),1,2);
+	             play.select(button.getBtn(1,2),1,2);;
 	         }
 	     });
 		button.getBtn(2,0).addActionListener(new ActionListener() {
@@ -78,7 +77,7 @@ public class MyListerner {
 	         public void actionPerformed(ActionEvent e)
 	         {
 	             //Execute when button is pressed
-	             play.select(button.getBtn(2,1),2,1);
+	             play.select(button.getBtn(2,1),2,1);     
 	         }
 	     });
 		button.getBtn(2,2).addActionListener(new ActionListener() {
